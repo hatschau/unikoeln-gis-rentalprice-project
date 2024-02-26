@@ -1,21 +1,31 @@
-import mietspiegel2000bis2021 from "../assets/mietspiegel2000bis2021.png"
-import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
+import Menu from "../Menu/Menu"
+import About from "../About/About"
+import Header from "../Header/Header"
+import styled from "styled-components"
+import L from 'leaflet'
+
+const HomeContainer = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
 
 export default function Homepage() {
 
+    const menuItems = ["About", "Maps", "Data", "Analysis"]
+    const headerItems = ["LOGO", "i"]
+
     return (
         <>
-            <MapContainer center={[50.934, 6.962]} zoom={13} scrollWheelZoom={false} >
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker position={[50.934, 6.962]}>
-                    <Popup>
-                        Hier ist Köln. <br /> Lieblingsstadt.
-                    </Popup>
-                </Marker>
-            </MapContainer>
+            <HomeContainer>
+                <Header headerItems={headerItems} />
+                <Menu menuItems={menuItems} />
+                <About />
+                <div id="map">
+
+                </div>
+            </HomeContainer>
         </>
     )
 }

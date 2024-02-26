@@ -26,7 +26,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -77,6 +76,6 @@ button:focus-visible {
 }
 
 .leaflet-container {
-  width: 100wh;
+  width: 100vh;
   height: 100vh;
 }
