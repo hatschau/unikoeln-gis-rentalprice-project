@@ -4,7 +4,7 @@ import { Headline } from '../TextBlock'
 export default function LeafletMap() {
     return (
         <>
-            <Headline>MAPS</Headline>
+
             <MapContainer center={[50.934, 6.962]} zoom={13} scrollWheelZoom={false} >
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

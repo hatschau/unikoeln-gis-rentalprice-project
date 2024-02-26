@@ -4,9 +4,10 @@ import Header from "../Header/Header"
 import Analysis from "../Analysis/Analysis"
 import Data from "../Data/Data"
 import LeafletMap from "../LeafletMap/LeafletMap"
+import SelectBox from "../SelectBox"
+import { Headline } from "../TextBlock"
 import styled from "styled-components"
-import L from 'leaflet'
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 const HomeContainer = styled.div`
 display: flex;
@@ -42,8 +43,12 @@ export default function Homepage() {
         }
     }
 
+    const [mapState, setMapState] = useState("data1") // data1, data2 or compare
+
     const menuItems = ["about", "map", "data", "analysis"]
     const headerItems = ["LOGO", "i"]
+
+    console.log("mapState", mapState)
 
     return (
         <>
@@ -54,7 +59,14 @@ export default function Homepage() {
                     <About />
                 </div>
                 <div id="map" className="section" ref={map}>
-                    <LeafletMap />
+                    <Headline>MAPS</Headline>
+                    <div style={{ alignItems: "flex-start" }}>
+                        <SelectBox setMapState={setMapState} />
+                    </div>
+                    {mapState === "data1" && <LeafletMap />}
+                    {mapState === "data2" && <LeafletMap />}
+                    {mapState === "compare" && <LeafletMap />}
+
                 </div>
                 <div className="section" ref={data}>
                     <Data />
