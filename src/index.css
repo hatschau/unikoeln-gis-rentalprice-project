@@ -72,7 +72,18 @@ button:focus-visible {
 }
 
 #map {
-  height: 180px;
+  height: 600px;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .leaflet-container {

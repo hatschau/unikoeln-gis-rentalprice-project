@@ -1,1 +1,1 @@
-export { default } from './TextBlock'
+export { default, Textfield, Headline } from './TextBlock'

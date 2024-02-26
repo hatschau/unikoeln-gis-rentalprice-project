@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 const Textfield = styled.p`
+padding-left: 10px;
+padding-right: 10px;
 `
 
 const AboutContainer = styled.div`
@@ -27,3 +29,5 @@ export default function TextBlock({ headline, textfield }) {
     )
 
 }
+
+export { Textfield, Headline }

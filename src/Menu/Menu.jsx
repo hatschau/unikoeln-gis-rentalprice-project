@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const MenuItem = styled.button`
 width: 100%;
 border-radius: none;
-background: #000000;
+background: ${props => props.$styleprops ? $styleprops.background : "#000000"};
 `
 
 const MenuContainer = styled.div`
@@ -15,14 +15,15 @@ height: 3rem;
 background: #000000;
 `
 
-export default function Menu({ menuItems }) {
+export default function Menu({ menuItems, scrollToSection }, styleprops) {
     console.log(menuItems)
+    console.log(styleprops)
 
     return (
         <>
             <MenuContainer>
-                {menuItems.map((menuItems, index) => (
-                    <MenuItem key={index}>{menuItems}</MenuItem>
+                {menuItems.map((menuItem, index) => (
+                    <MenuItem key={index} styleprops={styleprops} onClick={() => scrollToSection(menuItem)}>{menuItem} </MenuItem>
                 ))}
             </MenuContainer>
 

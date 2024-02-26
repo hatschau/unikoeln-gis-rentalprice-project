@@ -15,8 +15,12 @@ align-items: center;
 
 export default function Header({ headerItems }) {
 
+    const styleprops = {
+        background: "#ffffff"
+    }
+
     return (<>
-        <Menu menuItems={headerItems} />
+        <Menu menuItems={headerItems} styleprops={styleprops} />
         <ImageContainer>
             <HeaderImage src={header_cologne} />
         </ImageContainer>
