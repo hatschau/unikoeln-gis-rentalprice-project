@@ -1,6 +1,8 @@
 import Menu from "../Menu/Menu"
 import About from "../About/About"
 import Header from "../Header/Header"
+import Analysis from "../Analysis/Analysis"
+import Data from "../Data/Data"
 import styled from "styled-components"
 import L from 'leaflet'
 
@@ -25,6 +27,8 @@ export default function Homepage() {
                 <div id="map">
 
                 </div>
+                <Data />
+                <Analysis />
             </HomeContainer>
         </>
     )
