@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Menu from "../Menu/Menu";
-import header_cologne from "../assets/header_cologne.jpeg"
+import header_cologne from "../../assets/header_cologne.jpeg"
 
 const HeaderImage = styled.img`
 width: 100%;
