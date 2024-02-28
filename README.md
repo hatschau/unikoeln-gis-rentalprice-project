@@ -1,13 +1,13 @@
 # Required Installations
 - Node.js
 - npm
-(See: https://www.theodinproject.com/lessons/foundations-installing-node-js)
+(See: https://www.theodinproject.com/lessons/foundations-installing-node-js or https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-# Usage
+## Usage
 - Vite
 - React
 
-# Dependencies
+## Dependencies
 - leaflet
 - react-leaflet
 (npm install react react-dom leaflet
