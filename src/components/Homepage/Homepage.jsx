@@ -8,6 +8,7 @@ import SelectBox from "../SelectBox"
 import { Headline } from "../TextBlock"
 import styled from "styled-components"
 import { useRef, useState } from "react"
+import MapComponent from "../LeafletMapGis2web/LeafletMapGis2web"
 
 const HomeContainer = styled.div`
 display: flex;
@@ -57,6 +58,9 @@ export default function Homepage() {
                 <Menu menuItems={menuItems} scrollToSection={scrollToSection} />
                 <div className="section" ref={about} >
                     <About />
+                </div>
+                <div>
+                    <MapComponent />
                 </div>
                 <div id="map" className="section" ref={map}>
                     <Headline>MAPS</Headline>
