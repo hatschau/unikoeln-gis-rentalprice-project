@@ -113,6 +113,9 @@ const MapComponent = () => {
         map.addLayer(layer_mietpreis_2019_3);
 
         // Layer Control
+        function setBounds() {
+        }
+
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
