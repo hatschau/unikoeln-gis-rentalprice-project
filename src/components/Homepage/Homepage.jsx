@@ -3,7 +3,7 @@ import About from "../About/About"
 import Header from "../Header/Header"
 import Analysis from "../Analysis/Analysis"
 import Data from "../Data/Data"
-import LeafletMap from "../LeafletMap/LeafletMap"
+import LeafletMap_Placeholder from "../LeafletMap_Placeholder/LeafletMap_Placeholder"
 import SelectBox from "../SelectBox"
 import { Headline } from "../TextBlock"
 import styled from "styled-components"
@@ -59,17 +59,17 @@ export default function Homepage() {
                 <div className="section" ref={about} >
                     <About />
                 </div>
-                <div>
-                    <MapComponent />
-                </div>
+
                 <div id="map" className="section" ref={map}>
                     <Headline>MAPS</Headline>
                     <div style={{ alignItems: "flex-start" }}>
                         <SelectBox setMapState={setMapState} />
                     </div>
-                    {mapState === "data1" && <LeafletMap />}
-                    {mapState === "data2" && <LeafletMap />}
-                    {mapState === "compare" && <LeafletMap />}
+
+                    {mapState === "data1" && <MapComponent />
+                    }
+                    {mapState === "data2" && <LeafletMap_Placeholder />}
+                    {mapState === "compare" && <LeafletMap_Placeholder />}
 
                 </div>
                 <div className="section" ref={data}>

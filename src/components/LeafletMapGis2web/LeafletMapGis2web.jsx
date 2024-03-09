@@ -12,6 +12,8 @@ import { pop_arbeitslosenquote_2019_weniger_daten_1, style_arbeitslosenquote_201
 import { pop_einwohner_dichte_2019_2, style_einwohner_dichte_2019_2_0 } from './einwohnerdichte'
 import { pop_mietpreis_2019_3, style_mietpreis_2019_3_0 } from './mietpreis'
 
+// TODO: Adress-Suche Funktionalität
+
 const MapComponent = () => {
 
     console.log("Arbeitslosenquote", json_arbeitslosenquote_2019_weniger_daten_1)
