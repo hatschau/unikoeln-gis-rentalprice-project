@@ -1,5 +1,5 @@
 import TextBlock from "../TextBlock/TextBlock"
-import analysisText from "../texts/analysisText"
+import { analysisText } from "../texts/Texts"
 
 export default function Analysis() {
 

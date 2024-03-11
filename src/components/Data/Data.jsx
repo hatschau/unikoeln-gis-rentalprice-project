@@ -1,7 +1,7 @@
 import TextBlock from "../TextBlock/TextBlock"
 import styled from 'styled-components'
 import Dataset_StadtKoeln_Mietpreisprojekt from "./dataForDownload/Dataset_StadtKoeln_Mietpreisprojekt.zip"
-import dataText from "../texts/DataText"
+import { dataText } from "../texts/Texts"
 
 const DataDownloadContainer = styled.div`
 display: flex;

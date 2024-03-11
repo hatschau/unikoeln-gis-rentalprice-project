@@ -1,5 +1,14 @@
+const aboutText = <>
+    Wie in jeder Stadt, unterscheiden sich auch in Köln die durchschnittlichen Mietpreise in den verschiedenen Stadtvierteln. Doch welche Faktoren nehmen Einfluss auf die Mietpreise? Kann man sie anhand einer Karte ablesen? Mit unserem Projekt möchten wir eine Darstellungsform der Mietpreise und potenziellen Einflussfaktoren im Kölner Stadtgebiet untersuchen.
+</>
+
 const dataText = <>
     Nach einer ausschweifenden Daten Recherche mussten wir festfestellen, dass die Mietpreisdaten der Stadt Köln über einen langen Zeitraum leider unzureichend und unvollständig sind. So haben wir uns entschieden, die Daten des Monitorings von 2019 und die Vergleichsadaten aus dem Jahr 2016 für unser Projekt zu verwenden. <br /> Dafür haben wir gescannt, welche Daten das Monitoring erfasst und welche davon für unser Interessensgebiet relevant sind. Besonders interessiert haben und die folgenden Werte in Zusammenhang mit den durchschnittlichen Mietpreisen der einzelnen Stadtviertel: Arbeitslosenquote, Geförderte Wohnungen, Einwohnerdichte, Haushaltsgröße. <br />Diese Daten stehen Ihnen unten als Download im csv-Format zur Verfügung. Das Monitoring der Stadt finden Sie außerdem als pdf <a href="https://www.stadt-koeln.de/mediaasset/content/pdf15/statistikmonitoring/monitoring_stadtentwicklung_ergebnisband.pdf">hier</a>.
 </>
 
-export default dataText
+const analysisText = <>
+// Hier kommt der Analyse Text rein
+</>
+
+export { aboutText, dataText, analysisText }
+

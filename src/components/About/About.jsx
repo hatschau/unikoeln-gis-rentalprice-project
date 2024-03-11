@@ -1,5 +1,5 @@
 import TextBlock from "../TextBlock/TextBlock"
-import aboutText from "../texts/AboutText"
+import { aboutText } from "../texts/Texts"
 
 export default function About() {
 
