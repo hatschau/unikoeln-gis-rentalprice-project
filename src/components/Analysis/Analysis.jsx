@@ -1,13 +1,13 @@
 import TextBlock from "../TextBlock/TextBlock"
+import analysisText from "../texts/analysisText"
 
 export default function Analysis() {
 
     const headline = "ANALYSIS"
-    const textfield = "Analyse bliblablubb"
 
     return (
         <>
-            <TextBlock headline={headline} textfield={textfield} />
+            <TextBlock headline={headline} textfield={analysisText} />
         </>
     )
 }

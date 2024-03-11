@@ -1,13 +1,13 @@
 import TextBlock from "../TextBlock/TextBlock"
+import aboutText from "../texts/AboutText"
 
 export default function About() {
 
     const headline = "ABOUT"
-    const textfield = "Hier kommt ein super toller Text über unser Projekt. Mietpreise blablabla. Uni Projekt blablabla. Noch ein super Absatz über irgendwas mit Daten und Karten und so."
 
     return (
         <>
-            <TextBlock headline={headline} textfield={textfield} />
+            <TextBlock headline={headline} textfield={aboutText} />
         </>
     )
 }
