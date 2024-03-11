@@ -10,10 +10,14 @@
 ## Dependencies
 - leaflet
 - react-leaflet
-(npm install react react-dom leaflet
-npm install react-leaflet)
-- styled-components (npm install styled-components)
+- styled-components
+- leaflet-control-geocoder
+- reactjs-popup
+- autolinker
+- leaflet-hash
+- react-dom
 
 # Getting project startet
+- Install Node.js & npm
 - At first run 'npm install'
 - Use 'npm run dev' for live deployment while developing
