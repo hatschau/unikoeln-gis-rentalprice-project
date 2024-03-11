@@ -9,6 +9,7 @@ import { Headline } from "../TextBlock"
 import styled from "styled-components"
 import { useRef, useState } from "react"
 import MapComponent from "../LeafletMapGis2web/LeafletMapGis2web"
+import PopUp from "../PopUp/PopUp"
 
 const HomeContainer = styled.div`
 display: flex;
@@ -45,8 +46,9 @@ export default function Homepage() {
         }
     }
 
-    // State for map render control
+    // State for render control
     const [mapState, setMapState] = useState("data1") // data1 od data2
+    const [popUpState, setPopUpState] = useState(false)
 
     // constants 
     const menuItems = ["about", "map", "data", "analysis"]
@@ -55,7 +57,8 @@ export default function Homepage() {
     return (
         <>
             <HomeContainer>
-                <Header headerItems={headerItems} />
+                {popUpState && <PopUp />}
+                <Header headerItems={headerItems} setPopUpState={setPopUpState} />
                 <Menu menuItems={menuItems} scrollToSection={scrollToSection} />
                 <div className="section" ref={about} >
                     <About />

@@ -15,8 +15,6 @@ z-index: 999;
 `
 
 export default function Menu({ menuItems, scrollToSection }, styleprops) {
-    console.log(menuItems)
-    console.log(styleprops)
 
     return (
 
