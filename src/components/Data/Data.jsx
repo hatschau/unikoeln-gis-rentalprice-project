@@ -1,5 +1,6 @@
 import TextBlock from "../TextBlock/TextBlock"
 import styled from 'styled-components'
+import Dataset_StadtKoeln_Mietpreisprojekt from "./dataForDownload/Dataset_StadtKoeln_Mietpreisprojekt.zip"
 
 const DataDownloadContainer = styled.div`
 display: flex;
@@ -13,7 +14,9 @@ export default function Data() {
         <>
             <TextBlock headline={headline} textfield={textfield} />
             <DataDownloadContainer>
-                <button>Download Dataset 1</button>
+                <a href={Dataset_StadtKoeln_Mietpreisprojekt} download>
+                    <button>Download Dataset 1</button>
+                </a>
                 <button>Download Dataset 2</button>
             </DataDownloadContainer>
         </>
