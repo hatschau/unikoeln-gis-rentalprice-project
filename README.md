@@ -19,5 +19,5 @@
 
 # Getting project startet
 - Install Node.js & npm
-- At first run 'npm install'
+- At first run 'npm install' or 'npm i' to install the dependencies
 - Use 'npm run dev' for live deployment while developing
