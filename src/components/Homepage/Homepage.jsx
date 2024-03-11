@@ -13,12 +13,13 @@ import MapComponent from "../LeafletMapGis2web/LeafletMapGis2web"
 const HomeContainer = styled.div`
 display: flex;
 flex-direction: column;
-justify-content: center;
 align-items: center;
 height: 100%;
 `
 
 export default function Homepage() {
+
+    // Refs to scroll to section (menu)
     const about = useRef(null)
     const map = useRef(null)
     const data = useRef(null)
@@ -44,12 +45,12 @@ export default function Homepage() {
         }
     }
 
-    const [mapState, setMapState] = useState("data1") // data1, data2 or compare
+    // State for map render control
+    const [mapState, setMapState] = useState("data1") // data1 od data2
 
+    // constants 
     const menuItems = ["about", "map", "data", "analysis"]
     const headerItems = ["LOGO", "i"]
-
-    console.log("mapState", mapState)
 
     return (
         <>
@@ -59,18 +60,16 @@ export default function Homepage() {
                 <div className="section" ref={about} >
                     <About />
                 </div>
-
-                <div id="map" className="section" ref={map}>
+                <div ref={map}>
                     <Headline>MAPS</Headline>
                     <div style={{ alignItems: "flex-start" }}>
                         <SelectBox setMapState={setMapState} />
                     </div>
-
+                </div>
+                <div id="map" className="section">
                     {mapState === "data1" && <MapComponent />
                     }
                     {mapState === "data2" && <LeafletMap_Placeholder />}
-                    {mapState === "compare" && <LeafletMap_Placeholder />}
-
                 </div>
                 <div className="section" ref={data}>
                     <Data />

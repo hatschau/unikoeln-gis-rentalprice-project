@@ -10,7 +10,6 @@ export default function ({ setMapState }) {
         <Select onChange={(e) => setMapState(e.target.value)}>
             <option value="data1">Dataset 1</option>
             <option value="data2">Dataset 2</option>
-            <option value="compare">Compare Datasets</option>
         </Select>
     )
 }
