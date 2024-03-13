@@ -39,7 +39,7 @@ export default function Header({ headerItems }) {
         <HeaderItemContainer>
             <HeaderItem>LOGO</HeaderItem>
             <Popup trigger={<HeaderItem> i</HeaderItem>} position="bottom center">
-                <PopUpWindow>Information content here !!</PopUpWindow>
+                <PopUpWindow>This Website is part of a project by students of University of Cologne. <br /> Project members: Helena Köster, Dario Loa, Niels Schreiner, Marc Werk <br /> Website by Helena Köster <br /> Header Image by Council on Tall Buildings and Urban Habitat</PopUpWindow>
             </Popup>
 
 
