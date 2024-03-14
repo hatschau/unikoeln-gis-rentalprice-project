@@ -8,9 +8,11 @@ import 'leaflet-control-geocoder/dist/Control.Geocoder.css';
 import json_arbeitslosenquote_2019_weniger_daten_1 from './data/arbeitslosenquote_2019_weniger_daten_1';
 import json_einwohner_dichte_2019_2 from './data/einwohner_dichte_2019_2';
 import json_mietpreis_2019_3 from './data/mietpreis_2019_3';
+import json_Mietpreise2016_1 from './data/Mietpreise2016_1'
 import { pop_arbeitslosenquote_2019_weniger_daten_1, style_arbeitslosenquote_2019_weniger_daten_1_0 } from './arbeitslosenquote';
 import { pop_einwohner_dichte_2019_2, style_einwohner_dichte_2019_2_0 } from './einwohnerdichte'
 import { pop_mietpreis_2019_3, style_mietpreis_2019_3_0 } from './mietpreis'
+import { style_Mietpreise2016_1_0, pop_Mietpreise2016_1 } from './mietpreis2016'
 
 
 const MapComponent = () => {
@@ -79,9 +81,24 @@ const MapComponent = () => {
         });
         map.addLayer(layer_einwohner_dichte_2019_2);
 
-        // Mietpreis Layer
+        // Mietpreis Layer 2016
+        map.createPane('pane_Mietpreise2016_1');
+        map.getPane('pane_Mietpreise2016_1').style.zIndex = 403;
+        map.getPane('pane_Mietpreise2016_1').style['mix-blend-mode'] = 'normal';
+        var layer_Mietpreise2016_1 = new L.geoJson(json_Mietpreise2016_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Mietpreise2016_1',
+            layerName: 'layer_Mietpreise2016_1',
+            pane: 'pane_Mietpreise2016_1',
+            onEachFeature: pop_Mietpreise2016_1,
+            style: style_Mietpreise2016_1_0,
+        });
+        map.addLayer(layer_Mietpreise2016_1);
+
+        // Mietpreis Layer 2019
         map.createPane('pane_mietpreis_2019_3');
-        map.getPane('pane_mietpreis_2019_3').style.zIndex = 403;
+        map.getPane('pane_mietpreis_2019_3').style.zIndex = 404;
         map.getPane('pane_mietpreis_2019_3').style['mix-blend-mode'] = 'normal';
         var layer_mietpreis_2019_3 = new L.geoJson(json_mietpreis_2019_3, {
             attribution: '',
@@ -95,7 +112,7 @@ const MapComponent = () => {
         bounds_group.addLayer(layer_mietpreis_2019_3);
         map.addLayer(layer_mietpreis_2019_3);
 
-        // Layer Control
+
         function setBounds() {
         }
 
@@ -120,7 +137,7 @@ const MapComponent = () => {
 
         // Legend Control
         var baseMaps = {};
-        L.control.layers(baseMaps, { 'mietpreis_2019<br /><table><tr><td style="text-align: center;"><img src="./legend/mietpreis_2019_3_030.png" /></td><td>0 - 3</td></tr><tr><td style="text-align: center;"><img src="./legend/mietpreis_2019_3_361.png" /></td><td>3 - 6</td></tr><tr><td style="text-align: center;"><img src="./legend/mietpreis_2019_3_692.png" /></td><td>6 - 9</td></tr><tr><td style="text-align: center;"><img src="./legend/mietpreis_2019_3_9123.png" /></td><td>9 - 12</td></tr><tr><td style="text-align: center;"><img src="./legend/mietpreis_2019_3_12154.png" /></td><td>12 - 15</td></tr></table>': layer_mietpreis_2019_3, 'einwohner_dichte_2019<br /><table><tr><td style="text-align: center;"><img src="./legend/einwohner_dichte_2019_2_60035000.png" /></td><td>600 - 3500</td></tr><tr><td style="text-align: center;"><img src="./legend/einwohner_dichte_2019_2_350065001.png" /></td><td>3500 - 6500</td></tr><tr><td style="text-align: center;"><img src="./legend/einwohner_dichte_2019_2_650090002.png" /></td><td>6500 - 9000</td></tr><tr><td style="text-align: center;"><img src="./legend/einwohner_dichte_2019_2_9000120003.png" /></td><td>9000 - 12000</td></tr><tr><td style="text-align: center;"><img src="./legend/einwohner_dichte_2019_2_12000150004.png" /></td><td>12000 - 15000</td></tr></table>': layer_einwohner_dichte_2019_2, 'arbeitslosenquote_2019_weniger_daten<br /><table><tr><td style="text-align: center;"><img src="./legend/arbeitslosenquote_2019_weniger_daten_1_1550.png" /></td><td>1,5 - 5</td></tr><tr><td style="text-align: center;"><img src="./legend/arbeitslosenquote_2019_weniger_daten_1_591.png" /></td><td>5 - 9</td></tr><tr><td style="text-align: center;"><img src="./legend/arbeitslosenquote_2019_weniger_daten_1_91252.png" /></td><td>9 - 12,5</td></tr><tr><td style="text-align: center;"><img src="./legend/arbeitslosenquote_2019_weniger_daten_1_1251653.png" /></td><td>12,5 - 16,5</td></tr><tr><td style="text-align: center;"><img src="./legend/arbeitslosenquote_2019_weniger_daten_1_1652014.png" /></td><td>16,5 - 20,1</td></tr></table>': layer_arbeitslosenquote_2019_weniger_daten_1, "OpenStreetMap": layer_OpenStreetMap_0, }).addTo(map);
+        L.control.layers(baseMaps, { 'Mietpreis 2019<br /><table><tr><td style="text-align: center;"><img src="./legend/mietpreis_2019_3_030.png" /></td><td>0 - 3</td></tr><tr><td style="text-align: center;"><img src="./legend/mietpreis_2019_3_361.png" /></td><td>3 - 6</td></tr><tr><td style="text-align: center;"><img src="./legend/mietpreis_2019_3_692.png" /></td><td>6 - 9</td></tr><tr><td style="text-align: center;"><img src="./legend/mietpreis_2019_3_9123.png" /></td><td>9 - 12</td></tr><tr><td style="text-align: center;"><img src="./legend/mietpreis_2019_3_12154.png" /></td><td>12 - 15</td></tr></table>': layer_mietpreis_2019_3, 'Mietpreis 2016<br /><table><tr><td style="text-align: center;"><img src="./legend/Mietpreise2016_1_0250.png" /></td><td>0 - 2,5</td></tr><tr><td style="text-align: center;"><img src="./legend/Mietpreise2016_1_2551.png" /></td><td>2,5 - 5</td></tr><tr><td style="text-align: center;"><img src="./legend/Mietpreise2016_1_5752.png" /></td><td>5 - 7,5</td></tr><tr><td style="text-align: center;"><img src="./legend/Mietpreise2016_1_75103.png" /></td><td>7,5 - 10</td></tr><tr><td style="text-align: center;"><img src="./legend/Mietpreise2016_1_101254.png" /></td><td>10 - 12,5</td></tr><tr><td style="text-align: center;"><img src="./legend/Mietpreise2016_1_125155.png" /></td><td>12,5 - 15</td></tr><tr><td style="text-align: center;"><img src="./legend/Mietpreise2016_1_151756.png" /></td><td>15 - 17,5</td></tr><tr><td style="text-align: center;"><img src="./legend/Mietpreise2016_1_1752017.png" /></td><td>17,5 - 20,1</td></tr></table>': layer_Mietpreise2016_1, 'Einwohnerdichte 2019<br /><table><tr><td style="text-align: center;"><img src="./legend/einwohner_dichte_2019_2_60035000.png" /></td><td>600 - 3500</td></tr><tr><td style="text-align: center;"><img src="./legend/einwohner_dichte_2019_2_350065001.png" /></td><td>3500 - 6500</td></tr><tr><td style="text-align: center;"><img src="./legend/einwohner_dichte_2019_2_650090002.png" /></td><td>6500 - 9000</td></tr><tr><td style="text-align: center;"><img src="./legend/einwohner_dichte_2019_2_9000120003.png" /></td><td>9000 - 12000</td></tr><tr><td style="text-align: center;"><img src="./legend/einwohner_dichte_2019_2_12000150004.png" /></td><td>12000 - 15000</td></tr></table>': layer_einwohner_dichte_2019_2, 'Arbeitslosenquote 2019<br /><table><tr><td style="text-align: center;"><img src="./legend/arbeitslosenquote_2019_weniger_daten_1_1550.png" /></td><td>1,5 - 5</td></tr><tr><td style="text-align: center;"><img src="./legend/arbeitslosenquote_2019_weniger_daten_1_591.png" /></td><td>5 - 9</td></tr><tr><td style="text-align: center;"><img src="./legend/arbeitslosenquote_2019_weniger_daten_1_91252.png" /></td><td>9 - 12,5</td></tr><tr><td style="text-align: center;"><img src="./legend/arbeitslosenquote_2019_weniger_daten_1_1251653.png" /></td><td>12,5 - 16,5</td></tr><tr><td style="text-align: center;"><img src="./legend/arbeitslosenquote_2019_weniger_daten_1_1652014.png" /></td><td>16,5 - 20,1</td></tr></table>': layer_arbeitslosenquote_2019_weniger_daten_1, "OpenStreetMap": layer_OpenStreetMap_0, }).addTo(map);
         setBounds();
 
         // Cleanup function to remove the map on unmount
