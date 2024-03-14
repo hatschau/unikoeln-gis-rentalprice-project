@@ -20,4 +20,5 @@
 # Getting project startet
 - Install Node.js & npm
 - At first run 'npm install' or 'npm i' to install the dependencies
-- Use 'npm run dev' for live deployment while developing
+- Use 'npm run dev' for live deployment while developing (localhost uri will be shown on the terminal)
+- Use 'npm run preview' for previewing the build locally (localhost uri will be shown on the terminal)
