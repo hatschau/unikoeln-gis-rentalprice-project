@@ -3,12 +3,12 @@ import About from "../About/About"
 import Header from "../Header/Header"
 import Analysis from "../Analysis/Analysis"
 import Data from "../Data/Data"
-import LeafletMap_Placeholder from "../LeafletMap_Placeholder/LeafletMap_Placeholder"
 import SelectBox from "../SelectBox"
 import { Headline } from "../TextBlock"
 import styled from "styled-components"
 import { useRef, useState } from "react"
 import MapComponent from "../LeafletMapDataset1/LeafletMapGis2web"
+import MapComponent2 from "../LeafletMapDataset2/LeafletMapGis2web"
 import PopUp from "../PopUp/PopUp"
 
 const HomeContainer = styled.div`
@@ -46,11 +46,11 @@ export default function Homepage() {
         }
     }
 
-    // State for render control
+    // States for render control
     const [mapState, setMapState] = useState("data1") // data1 od data2
     const [popUpState, setPopUpState] = useState(false)
 
-    // constants 
+    // Menu constants 
     const menuItems = ["about", "map", "data", "analysis"]
     const headerItems = ["LOGO", "i"]
 
@@ -72,7 +72,7 @@ export default function Homepage() {
                 <div id="map" className="section">
                     {mapState === "data1" && <MapComponent />
                     }
-                    {mapState === "data2" && <LeafletMap_Placeholder />}
+                    {mapState === "data2" && <MapComponent2 />}
                 </div>
                 <div className="section" ref={data}>
                     <Data />
