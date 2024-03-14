@@ -8,7 +8,7 @@ import SelectBox from "../SelectBox"
 import { Headline } from "../TextBlock"
 import styled from "styled-components"
 import { useRef, useState } from "react"
-import MapComponent from "../LeafletMapGis2web/LeafletMapGis2web"
+import MapComponent from "../LeafletMapDataset1/LeafletMapGis2web"
 import PopUp from "../PopUp/PopUp"
 
 const HomeContainer = styled.div`
