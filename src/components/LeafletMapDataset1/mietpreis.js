@@ -1,4 +1,4 @@
-import { autolinker, removeEmptyRowsFromPopupContent, highlightLayer, highlightFeature } from './utils'
+import { autolinker, removeEmptyRowsFromPopupContent, highlightLayer, highlightFeature } from '../utils'
 
 
 function pop_mietpreis_2019_3(feature, layer) {

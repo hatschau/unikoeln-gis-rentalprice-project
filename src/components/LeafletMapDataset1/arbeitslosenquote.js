@@ -1,5 +1,5 @@
 
-import { autolinker, removeEmptyRowsFromPopupContent, highlightLayer, highlightFeature } from './utils'
+import { autolinker, removeEmptyRowsFromPopupContent, highlightLayer, highlightFeature } from '../utils'
 
 function pop_arbeitslosenquote_2019_weniger_daten_1(feature, layer) {
     layer.on({

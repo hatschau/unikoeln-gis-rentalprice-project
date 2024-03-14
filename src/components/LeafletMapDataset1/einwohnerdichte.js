@@ -1,4 +1,4 @@
-import { autolinker, removeEmptyRowsFromPopupContent, highlightLayer, highlightFeature } from './utils'
+import { autolinker, removeEmptyRowsFromPopupContent, highlightLayer, highlightFeature } from '../utils'
 
 
 function pop_einwohner_dichte_2019_2(feature, layer) {
