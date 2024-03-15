@@ -9,7 +9,7 @@ display: flex;
 justify-content: space-between;
 `
 export default function Data() {
-    const headline = "Data"
+    const headline = "DATA"
 
     return (
         <>

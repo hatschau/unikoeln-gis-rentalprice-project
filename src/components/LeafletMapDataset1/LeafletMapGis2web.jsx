@@ -145,7 +145,7 @@ const MapComponent = () => {
             map.remove();
         };
 
-    }, []); // Leave the dependency array empty to render the map on iniitial render
+    }, []); // Leave the UseEffect dependency array empty to render the map on initial render
 
     return <div id="map" style={{ width: '600px', height: '400px' }}></div>;
 };

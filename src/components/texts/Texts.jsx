@@ -13,7 +13,7 @@ const dataText = <>
 </>
 
 const analysisText = <>
-// Hier kommt der Analyse Text rein
+    <h3>Erste Ergebnisse</h3> <br />Von 2016 auf 2019 sind die Mieten am stärksten in den zentralen Stadtteilen und auf der linken Rheinseite gestiegen. Also dort, wo das größte Angebot an Kultur, Bildungs- und Freizeiteinrichtungen vorhanden ist, wo die durchschnittliche Haushaltsgröße am kleinsten und die Einwohnerdichte am höchsten ist. Diese Zahlen haben sich über den beobachteten Zeitraum kaum verändert. Die Arbeitslosenquote ist in den Stadtteilen mit niedrigeren Mieten höher. In fast ganz Köln ist diese auf 2019 aber gesunken.
 </>
 
 export { aboutText, dataText, analysisText }
