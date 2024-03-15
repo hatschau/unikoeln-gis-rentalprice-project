@@ -22,3 +22,4 @@
 - At first run 'npm install' or 'npm i' to install the dependencies
 - Use 'npm run dev' for live deployment while developing (localhost uri will be shown on the terminal)
 - Use 'npm run preview' for previewing the build locally (localhost uri will be shown on the terminal)
+- Use 'npm run build' to create a single-file to run the project as a local html-file before deployment
